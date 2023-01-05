@@ -5,7 +5,8 @@ Sample programs and exploits for a basic introduction to system security
 ## Environment
 Language: C++  
 Developed in WSL2 Ubuntu 22.04  
-Ubuntu GLIBC 2.35
+Ubuntu GLIBC 2.35  
+Exploit written in Python3 with [Pwntools](https://github.com/Gallopsled/pwntools)
 
 ## Guide
 Main branch has initial version  
