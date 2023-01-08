@@ -32,13 +32,18 @@ int main() {
         positions.push_back(Coord{x, y});
     }
 
+    // Refer to README for the derivation of this formula
     Coord avg{0, 0};
+    Coord rem{0, 0};
     for(int i = 0; i < positions.size(); ++i) {
-        avg.x += positions[i].x;
-        avg.y += positions[i].y;
+        int incX = positions[i].x - avg.x + rem.x;
+        avg.x += incX / (i+1);
+        rem.x = incX % (i+1);
+
+        int incY = positions[i].y - avg.y + rem.y;
+        avg.y += incY / (i+1);
+        rem.y = incY % (i+1);
     }
-    avg.x /= positions.size();
-    avg.y /= positions.size();
 
     std::cout << "\nThe average position is (" << avg.x << ", " << avg.y << ")"
         << std::endl;
