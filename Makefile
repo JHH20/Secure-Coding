@@ -4,7 +4,7 @@
 # Disable canary: -fno-stack-protector
 # Disable NX: -z execstack
 # Debugging symbol: -g (for stepping through at source level in gdb)
-OPTS = -g -no-pie -fno-stack-protector -z execstack
+OPTS = -g -no-pie -fno-stack-protector
 
 TARGETS_OUT = $(subst src/,build/,$(wildcard src/*))
 TARGETS = $(subst build/,,$(TARGETS_OUT))
